@@ -1,63 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main nonsense page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writers' Forum</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
-  <header>
-    <h1>Some nonsense creator</h1>
-    <nav>
-        <p>My nonsense consists of these content pages</p>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>Writers' Forum</h2>
       <ul>
-        <li><a href="#about">About me, nigga</a></li>
-        <li><a href="#stories">Some written stories</a></li>
-        <li><a href="#photos">Explicit content</a></li>
+        <li><a href="#" id="homeLink">Home</a></li>
+        <li><a href="#" id="groupsLink">Groups</a></li>
+        <li><a href="#" id="messagesLink">Messages</a></li>
+        <li><a href="#" id="accountLink">My Account</a></li>
+        <li><a href="#" id="newPostLink">&#10133; Add New Post</a></li>
       </ul>
     </nav>
-  </header>
 
-  <main>
-    <section id="about" class="about">
-      <h2>'bout me</h2>
-      <p>My name is Optimus Prime and I send this message to all across the Earth and the Stars above.  
-        Chester will continue to live on in our hearts and sparks. He will never be forgotten.</p>
-      <p>Chester may be gone, but his voice and soul lives through us all.</p>    
-    </section>
+    <main class="content" id="mainContent">
+      <!-- Content will be loaded here by JavaScript -->
+    </main>
+  </div>
 
-    <section id="stories" class="stories">
-      <h2>Stories and nonsense</h2>
-      <div class="story-list">
-        <article class="story-card">
-          <h3>Gone with the wind</h3>
-          <p>Classical and legendary nonsense written by Margaret Mitchell, I believe.</p>
-        </article>
-        <article class="story-card">
-          <h3>Scarlett</h3>
-          <p>Not Johanson, just the rest of the story of "Gone with the wind" written by Alexandra Ripley.</p>
-        </article>
-        <article class="story-card">
-          <h3>The silent patient</h3>
-          <p>Another intriguing story of totally another genre written by Alex Michaelidies.</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="photos" class="photos">
-      <h2>Explicit content</h2>
-      <div class="photo-gallery">
-        <img src="https://i.ytimg.com/vi/kXYiU_JCYtU/maxresdefault.jpg" alt="Chester Herrington" >
-        <img src="https://pikuco.ru/upload/test_stable/b49/b492f2992425a10c95dce95bdee00c53.webp" alt="Billy Bennington" >
-        <img src="https://pbs.twimg.com/media/D7qNvXGWsAEiSLS.jpg" alt="Чёрно-белая фотография" >
-        <img src="https://cdn.britannica.com/58/129958-050-C0EF01A4/Adolf-Hitler-1933.jpg" alt="О боже, какой мужчина" >
-      </div>
-    </section>
-  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 
-  <footer>
-    <p>&copy; 1984 | George OrWell.</p>
-  </footer>
+
+  <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+    <div style="background:#fff7e6; width:400px; margin:100px auto; padding:20px; border-radius:12px; position:relative;">
+      <h2>Create a New Post</h2>
+      <input type="text" placeholder="Title">
+      <textarea placeholder="Write your story..."></textarea>
+      <button style="background-color: #a9745b; color: white;">Submit</button>
+      <button id="closeModal" style="background-color: #8b5e3c; color: white; position:absolute; top:10px; right:10px;">X</button>
+    </div>
+  </div>
+
+  
 </body>
 </html>
