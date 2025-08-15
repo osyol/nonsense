@@ -1,5 +1,24 @@
 const mainContent = document.getElementById('mainContent');
 
+let images = ["https://lezebre.lu/images/detailed/80/17536-linkin-park-logo.png",
+    "https://1000logos.net/wp-content/uploads/2021/12/Linkin-Park-logo.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkin-Park-Logo-880x660.png/640px-Linkin-Park-Logo-880x660.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqR_xAUoLCAjFnt82-S49Sw_i409HvW_Q06Q&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8KBXpj_FSM3OVnlMv6r_bpt8rbZjFGYXrwg&s"
+];
+let i = 0;
+
+let interval = setInterval(() => {
+    document.getElementById("pre-img").src = images[i];
+    i = (i + 1) % images.length;
+}, 100 )
+
+window.addEventListener("load", function(){
+    clearInterval(interval);
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+});
+
 document.getElementById('homeLink').addEventListener('click', showHome);
 document.getElementById('groupsLink').addEventListener('click', showGroups);
 document.getElementById('messagesLink').addEventListener('click', showMessages);
@@ -118,3 +137,4 @@ $(document).ready(function() {
   // При загрузке страницы сразу отображаем главную страницу
   showHome();
 });
+
